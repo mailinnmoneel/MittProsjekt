@@ -37,6 +37,8 @@ function updateClock()
     klokkeDiv = timeExpired();
 
   updateView();
+  //resten av siden funker ikke når view oppdateres hvert sekund//
+  //Løsning?// 
 }
 
 function timeExpired()
