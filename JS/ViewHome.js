@@ -18,7 +18,8 @@ function updateViewHome()
 
     <div class="row">
         <div class="side">
-            <p>Kontaktinformasjon</p>
+        <img src="bilde_Mailinn.jpg" style="width:400px";>
+            <p>Kontaktinformasjon:</p>
             <p>E-post:mailinn.kiste@gmail.com</p>
             <p>Mobil: 95 90 17 76</p>
         </div>
