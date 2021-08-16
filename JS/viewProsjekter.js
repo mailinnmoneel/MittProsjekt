@@ -8,7 +8,7 @@ function updateViewKoding()
     
     <div class="navbar">
         <a href="#Hjem" onclick="gotoHome()">Hjem</a>
-        <a href="#Koding" onclick="gotoKoding()">Koding</a>
+        <a href="#Koding" onclick="gotoKoding()">Mine Prosjekter</a>
     </div>
 
     <div class="parent">
