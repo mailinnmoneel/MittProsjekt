@@ -3,6 +3,12 @@
 const model = {
     tasks : [
         { person: 'Alexa', description: 'Order plants', date: new Date().toLocaleDateString(), isDone: true },
+        { person: 'Emma', description:  'Fix car', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Trudy', description: 'Bake Cake', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Even', description: 'Get haircut', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Ben', description: 'Organice closet', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Peter', description: 'Buy new brush', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Elena', description: 'Clean Stalls', date: new Date().toLocaleDateString(), isDone: false },
     ],
     dateInput: null,
     dateOutput: null,
@@ -22,7 +28,7 @@ const model = {
          minutes: 0,
          seconds: 0,
     },
-    app: { currentpage: 'home',
+    app: { currentpage: 'ToDoList',
 
     },
     fredslilje: { kallenavn: "Fredslilje",
