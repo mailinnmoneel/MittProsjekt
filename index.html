@@ -8,15 +8,21 @@
     <title>Document</title>
 
     <script src="JS/model.js"></script>
+
     <script src="JS/ViewHome.js"></script>
-    <script src="JS/viewProsjekter.js"></script>
+    <script src="JS/viewMiddagsRullet.js"></script>
+    <script src="JS/viewTimeEvent.js"></script>
+    <script src="JS/viewToDo.js"></script>
+
     <script src="JS/appController.js"></script>
+
     <script src="JS/tidsEventController.js"></script>
+    <script src="JS/todoListController.js"></script>
 </head>
+
 <body onload="Awake()">
     
     <div id="app"></div>
-    <!-- <div id="appTidsevent"></div> -->
 
     <script>
 
@@ -26,7 +32,9 @@
         {  
             let html ="";
             if(model.app.currentpage == 'home') html = updateViewHome();
-            if(model.app.currentpage == 'koding') html = updateViewKoding();
+            if(model.app.currentpage == 'MiddagsRullet') html = updateViewMiddagsRullet();
+            if(model.app.currentpage == 'TimeEvent') html = updateViewTimeEvent();
+            if(model.app.currentpage == 'ToDoList') html = updateViewTodolist();
             document.getElementById("app").innerHTML = html;
         }
 
@@ -35,3 +43,4 @@
 
 </body>
 </html>
+

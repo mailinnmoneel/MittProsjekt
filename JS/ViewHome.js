@@ -6,22 +6,22 @@ function updateViewHome()
     //document.getElementById("app").innerHTML
     let html = `
     
-    <div class="navbar">
-        <a href="#Hjem" onclick="gotoHome()">Hjem</a>
-        <a href="#Koding" onclick="gotoKoding()">Mine Prosjekter</a>
-    </div>
-    
     <div class="header">
         <h1>Mailinn Moneel Kiste</h1>
         <p>Mistakes are the portals of discovery.-James Joyce.</p>
     </div>
 
+    <div class="navbar">
+        <a href="#Hjem" onclick="gotoHome()">Hjem</a>
+        <a href="#MiddagsRullet" onclick="gotoKoding()">Middags Rullet</a>
+        <a href="#TidsEvent" onclick="gotoTidsEvent()">Tids Event</a>
+        <a href="#ToDo" onclick="gotoToDo()">ToDo List</a>
+    </div>
+
     <div class="row">
         <div class="side">
         <img src="bilde_Mailinn.jpg" style="width:400px";>
-            <p>Kontaktinformasjon:</p>
-            <p>E-post:mailinn.kiste@gmail.com</p>
-            <p>Mobil: 95 90 17 76</p>
+            <button>Send meg en email</button>
         </div>
 
         <div class="main">
@@ -39,7 +39,7 @@ function updateViewHome()
             quidem labore officia assumenda praesentium neque vero doloremque 
             delectus accusantium exercitationem veritatis nostrum sed?</p>
             
-            <h1>Mine Inspirasjonskilder</h1>
+            <h1>Lorem</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Eveniet commodi hic, ipsa porro quisquam et dolore, 
             quidem labore officia assumenda praesentium neque vero doloremque 

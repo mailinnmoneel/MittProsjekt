@@ -8,34 +8,20 @@ function gotoHome()
 
 function gotoKoding()
 {
-    model.app.currentpage = 'koding';
+    model.app.currentpage = 'MiddagsRullet';
     updateView();
 }
 
-//Controller til Middagsrullet
-function randomFood() 
-{   
-        eatThisFood = model.food[Math.floor(Math.random() * model.food.length)];
-
-    updateView()
-}
-
-function addFood()
+function gotoTidsEvent()
 {
-    let newFood = model.foodInput;
-
-    if (isEmptyOrSpaces(newFood) == true) { alert("Du må skrive noe i feltet"); return; }
-
-
-    model.food.push(newFood);
-    alert('Ønsket er registrert!');
-        
+    model.app.currentpage = 'TimeEvent';
     updateView();
-    model.foodInput = null;
 }
 
-function isEmptyOrSpaces()
+function gotoToDo()
 {
-    return model.foodInput === null || model.foodInput.match(/^ *$/) !== null;
+    model.app.currentpage = 'ToDoList';
+    updateView();
 }
-//
+
+
