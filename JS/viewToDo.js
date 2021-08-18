@@ -1,12 +1,11 @@
 // View for ToDo List
-// var tasksTable = document.getElementById('app');
 
 updateViewTodolist();
 
 function updateViewTodolist(i) 
 {       
         html = `
-<div class="header">
+<div class="headerTodo">
     <h1>To Do Liste</h1>
 </div>
 
@@ -19,54 +18,65 @@ function updateViewTodolist(i)
 
 <div class="row">
 
-        <div class="side">
+        <div class="sideTodo">
             .....
         </div>
 
-        <div class="main">
+        <div class="mainTodo">
             
             <form>
-                <div class="container">
-                        <h1>Register</h1>
-                        </hr>
-                        <label for="personName"><b>Who is the lucky person?</b></label>
-                        <input type="text" placeholder = "${model.message.nameField}" name="persoNname" id="personName" 
-                        oninput = "model.personInput = this.value"/>
-                        <label for="Task"><b>What is the task?</b></label>
-                        <input type="text" placeholder="${model.message.taskField}" name="task" id="task" 
-                        oninput = "model.taskInput = this.value"/> 
-                        <label for="dueDate"><b>When does it need to be done?</b></label>
-                        <input id="datoInput" type="date" onchange = "model.dateInput = this.valueAsDate.toLocaleDateString().substr(0,10)">
-                        ${model.message.dateField}
-                        <button type="submit" class="registerbtn" onclick="addTask()">Register new task!</button>
-                </div>
+                <h1>Legg til flere oppgaver</h1>
+                </hr>
+                <label for="personName"><b>Navn</b></label>
+                <input type="text" placeholder = "${model.message.nameField}" 
+                    name="persoNname" id="personName" 
+                    oninput = "model.personInput = this.value"/>
+                <label for="Task">Oppgave</b></label>
+                <input type="text" placeholder="${model.message.taskField}" 
+                    name="task" id="task" 
+                    oninput = "model.taskInput = this.value"/> 
+                <label for="dueDate"><b>Frist</b></label>
+                <input id="datoInput" type="date" 
+                    onchange = "model.dateInput = this.valueAsDate.toLocaleDateString().substr(0,10)">
+                ${model.message.dateField}
+                <button type="submit" class="registerbtn" 
+                    onclick="addTask()">Legg til</button>
             </form> 
 
             <div id="registered"><b>${model.message.registeredField}</b></div>
 
 
-                <table>
+                <table id="tableDiv">
                     <tr>
-                        <th>Name</th>    
-                        <th>Task</th>
-                        <th></th>
-                        <th></th>
-                        <th>Duedate</th>
-                        <th>Date done</th>
-                    </tr>       
-                 </table>
-
+                    <th>Name</th>    
+                    <th>Task</th>
+                    <th></th>
+                    <th></th>
+                    <th>Duedate</th>
+                    <th>Date done</th>
+                    </tr> 
+                    </table>
+                    `
+                    ;
+                    for (let i = 0; i < model.tasks.length; i++)
+                        {html += createTableRow(i)
+                    ;} 
+                    html += `
         </div>        
 </div>
 
-`
-;for (let i = 0; i < model.tasks.length; i++) {html += createHtmlRow(i);}
+<div class="footer">
+    <h2>Footer</h2>
+</div>
 
+`
 return html;
-   
+
 };
         
-function createHtmlRow(i) 
+
+
+function createTableRow(i) 
 {
     const person = model.tasks[i]; 
     const task = model.tasks[i];
@@ -74,12 +84,7 @@ function createHtmlRow(i)
     const dateOutput = task.isDone ? new Date().toLocaleDateString() : '';
         if (!task.editMode)
             return `
-<div class="row">        
-    <div class="side">
-        
-    </div>
-
-    <div class="main">
+            
         <table>    
             <tr>
                 <td>${task.person}</td>
@@ -93,9 +98,7 @@ function createHtmlRow(i)
                 <td><div id="dueDate${i}"></div>${task.date}</td>
                 <td><div id=datoOutput"</div>${dateOutput}</td>
             </tr>
-        </table>
-    </div>
-</div>        
+        </table>        
      `;
             return `
         <table>    
