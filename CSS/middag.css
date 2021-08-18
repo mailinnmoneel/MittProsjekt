@@ -1,0 +1,75 @@
+.headerMiddag {
+    padding: 80px; 
+    text-align: center; 
+    background: #1abc9c; 
+    min-height: 380px;
+    background-image: url("https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white; 
+  }
+.mainMiddag {
+    flex: 70%; 
+    background-color: white; 
+    padding: 20px; 
+    text-align-last: center;
+}
+
+#rulletDiv {
+    background-color: #563f46;
+    color: white;
+    padding: 3vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 4vh; 
+    cursor: pointer; 
+    border: none;
+    text-shadow: 1px 1px black;
+    border-radius: 10px;
+}
+
+#rulletDiv:hover,
+#rulletDiv:focus {
+    background-color: #c8c3cc;
+    color: #563f46;
+    text-shadow: 1px 1px black;
+}
+
+#suggestionDiv {
+    color: #563f46;
+    padding: 3vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 5vh; 
+    text-shadow: 1px 1px black;
+    text-align-last: center;
+}
+
+#addField {
+    border-top: solid #563f46;
+    text-align-last: center;
+}
+
+#foodSuggestions {
+    background-color: #484f4f;
+    color: white;
+    font-size: 16px;
+    text-shadow: 2px 2px black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#registerButton {
+    background-color: #484f4f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-shadow: 1px 1px black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+

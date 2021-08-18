@@ -1,0 +1,13 @@
+.headertidsevent {
+    padding: 80px; 
+    text-align: center; 
+    background: #1abc9c; 
+    min-height: 380px;
+    background-image: url("https://cdn.pixabay.com/photo/2020/04/30/05/20/nature-5111414_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white; 
+  }
+  

@@ -2,9 +2,9 @@
 //ToDoList Controllere
 function updateTask(index) 
 {   
-    if (emptypersonInput() == true) { model.message.nameField = "Enter a name!" ; updateView(); return; }
-    if (emptytaskInput() == true) { model.message.taskField = "Enter a task!"; updateView(); return; }
-    if (emptydateInput() == true) { model.message.dateField = "Enter date!"; updateView(); return; }
+    if (emptypersonInput() == true) { model.message.nameField = "Obs! navn.." ; updateView(); return; }
+    if (emptytaskInput() == true) { model.message.taskField = "Obs! oppgave.."; updateView(); return; }
+    if (emptydateInput() == true) { model.message.dateField = "Obs! dato.."; updateView(); return; }
     const task = model.tasks[index];
    
     task.description = model.taskInput;
@@ -38,9 +38,9 @@ function deleteTask(index)
 //AddTaskControllere
 function addTask() {
     
-    if (emptypersonInput() == true) { model.message.nameField = "Please enter a name to register new task!" ; updateView(); return; }
-    if (emptytaskInput() == true) { model.message.taskField = "Please enter a task description!"; updateView(); return; }
-    if (emptydateInput() == true) { model.message.dateField = "Please enter a duedate!"; updateView(); return; }
+    if (emptypersonInput() == true) { model.message.nameField = "Obs! navn.." ; updateView(); return; }
+    if (emptytaskInput() == true) { model.message.taskField = "Obs! oppgave.."; updateView(); return; }
+    if (emptydateInput() == true) { model.message.dateField = "Obs! dato.."; updateView(); return; }
     
     model.tasks.push({
         person: model.personInput,
@@ -49,7 +49,7 @@ function addTask() {
 
         isDone: false
     });
-    model.message.registeredField = "New task added!";
+    model.message.registeredField = "Suksess!";
     updateView();
     addTaskReset();
 }
@@ -76,8 +76,8 @@ function addTaskReset()
         model.taskInput = null;
         model.dateInput = null;
 
-        model.message.nameField = "Enter Name";
-        model.message.taskField = "Enter Task";
+        model.message.nameField = "...";
+        model.message.taskField = "...";
         model.message.dateField = " ";
 
         model.message.registeredField = " ";

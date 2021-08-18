@@ -4,15 +4,16 @@ function updateViewTimeEvent()
     // document.getElementById("app").innerHTML=
     let html = `
     
-    <div class="header">
+    <div class="headertidsevent">
         <h1>Tids Event</h1>
+        <h3>Fordi hvem glemmer vel ikke å vanne plantene sine</h3>
     </div>
 
     <div class="navbar">
         <a href="#Hjem" onclick="gotoHome()">Hjem</a>
         <a href="#MiddagsRullet" onclick="gotoKoding()">Middags Rullet</a>
         <a href="#TidsEvent" onclick="gotoTidsEvent()">Tids Event</a>
-        <a href="#ToDo" onclick="gotoToDo()">ToDo List</a>
+        <a href="#ToDo" onclick="gotoToDo()">ToDo Liste</a>
     </div>
 
 <div class="row">

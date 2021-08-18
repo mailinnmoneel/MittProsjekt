@@ -1,7 +1,6 @@
 /* TodoList Style */
-
 table {
-    width: 50%;
+    width: 100%;
   }
   
 table, tr, td, th {
@@ -9,33 +8,30 @@ table, tr, td, th {
     border: 2px solid lightgray;
     border-collapse: collapse;
     text-align: center;
-    color: #34091C;
-    font-weight: bolder;
   }
   
   td, th {
-      padding: 10px;
+      padding: 3px;
       min-width: 150px;
   }
   
   th {
       background-color: darkgrey;
       border: 2px solid lightgray;
-      color: #34091C;
   }
   
   #editId, #saveId {
-    color: #34091C;
+    /* color: #34091C; */
     background-color: darkgrey;
-    font-weight: bolder;
-    height: 25px;
-    width: 80px;
+    /* font-weight: bolder; */
+    /* height: 25px; */
+    /* width: 80px; */
   }
   
   #deleteId {
-    color: white;
-    background-color: #BD0081;
-    font-weight: bolder;
+    /* color: white; */
+    /* background-color: #BD0081; */
+    /* font-weight: bolder; */
     height: 25px;
     width: 80px;
   }
@@ -59,19 +55,18 @@ input[type=text] {
 }
   
 input[type=text]:focus {
-    background-color: rgb(240, 173, 234);
+    background-color: rgb(194, 179, 157);
     outline: none;
 }
 
 .registerbtn {
-    background-color: #C21460;
+    background-color: #333;
     color: white;
-    padding: 16px 20px;
+    padding: 10px 10px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    /* width: 100%; */
-    opacity: 0.9;
+    width: 100%;
 }
 
 .registerbtn:hover {
@@ -81,7 +76,7 @@ input[type=text]:focus {
 #registered {
     font-size: 25px;
     font-weight: bolder;
-    color: #C21460;
+    color: #333;
     text-align: center;
 }
 
@@ -92,7 +87,7 @@ input[type=text]:focus {
     text-align: center; 
     background: #1abc9c; 
     min-height: 380px;
-    background-image: url("https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/29/13/46/book-1869969_960_720.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -13,7 +13,7 @@ function updateViewTodolist(i)
     <a href="#Hjem" onclick="gotoHome()">Hjem</a>
     <a href="#MiddagsRullet" onclick="gotoKoding()">Middags Rullet</a>
     <a href="#TidsEvent" onclick="gotoTidsEvent()">Tids Event</a>
-    <a href="#ToDo" onclick="gotoToDo()">ToDo List</a>
+    <a href="#ToDo" onclick="gotoToDo()">ToDo Liste</a>
 </div>
 
 <div class="row">
@@ -74,8 +74,6 @@ return html;
 
 };
         
-
-
 function createTableRow(i) 
 {
     const person = model.tasks[i]; 

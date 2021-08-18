@@ -6,7 +6,7 @@ function updateViewMiddagsRullet()
     // document.getElementById("app").innerHTML=
     let html = `
     
-    <div class="header">
+    <div class="headerMiddag">
         <h1>Middags Rullet</h1>
     </div>
 
@@ -14,7 +14,7 @@ function updateViewMiddagsRullet()
         <a href="#Hjem" onclick="gotoHome()">Hjem</a>
         <a href="#MiddagsRullet" onclick="gotoKoding()">Middags Rullet</a>
         <a href="#TidsEvent" onclick="gotoTidsEvent()">Tids Event</a>
-        <a href="#ToDo" onclick="gotoToDo()">ToDo List</a>
+        <a href="#ToDo" onclick="gotoToDo()">ToDo Liste</a>
     </div>
 
 <div class="row">
@@ -22,9 +22,10 @@ function updateViewMiddagsRullet()
         .....
     </div>
 
-    <div class="main">
+    <div class="mainMiddag">
         <h3> Usikker på hva du vil spise til middag i dag?</h3>
         <button id="rulletDiv" onclick="randomFood()">Få et middagsforslag</button>
+        </br>
         <div id="suggestionDiv">${eatThisFood}</div>
         <div id="addField">
             <h4>Legg til middagsforslag:</h4>

@@ -2,13 +2,13 @@
 
 const model = {
     tasks : [
-        { person: 'Alexa', description: 'Order plants', date: new Date().toLocaleDateString(), isDone: true },
-        { person: 'Emma', description:  'Fix car', date: new Date().toLocaleDateString(), isDone: false },
-        { person: 'Trudy', description: 'Bake Cake', date: new Date().toLocaleDateString(), isDone: false },
-        { person: 'Even', description: 'Get haircut', date: new Date().toLocaleDateString(), isDone: false },
-        { person: 'Ben', description: 'Organice closet', date: new Date().toLocaleDateString(), isDone: false },
-        { person: 'Peter', description: 'Buy new brush', date: new Date().toLocaleDateString(), isDone: false },
-        { person: 'Elena', description: 'Clean Stalls', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Alexa', description: 'Handle planter', date: new Date().toLocaleDateString(), isDone: true },
+        { person: 'Peter', description:  'Vaske bilen', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Alexa', description: 'Bake kake', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Alexa', description: 'Frisøren', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Peter', description: 'Organisere klesskapet', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Peter', description: 'Skifte olje', date: new Date().toLocaleDateString(), isDone: false },
+        { person: 'Peter', description: 'Lufte hunden', date: new Date().toLocaleDateString(), isDone: false },
     ],
     dateInput: null,
     dateOutput: null,
@@ -16,7 +16,7 @@ const model = {
     },
     personInput: null,
     taskInput: null,
-    message: {nameField: 'Enter Name', taskField: 'Enter Task', dateField: ' ', registeredField: ''},
+    message: {nameField: '...', taskField: '...', dateField: ' ', registeredField: ''},
 
     tidsevent:{
          standardTimer: 24,
