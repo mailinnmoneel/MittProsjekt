@@ -1,7 +1,7 @@
 //Tide
 function updateViewTimeEvent()
 {
-    let html = `
+    html = `
     
     <div class="header">
     </div>
@@ -11,6 +11,7 @@ function updateViewTimeEvent()
         <a href="#MiddagsRullet" onclick="gotoKoding()">Middags Rullet</a>
         <a href="#TidsEvent" onclick="gotoTidsEvent()">Tids Event</a>
         <a href="#ToDo" onclick="gotoToDo()">ToDo Liste</a>
+        <a href="#Budsjett" onclick="gotoBudget()">Budsjett</a>
     </div>
 
 <div class="row">

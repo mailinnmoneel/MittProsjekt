@@ -24,4 +24,9 @@ function gotoToDo()
     updateView();
 }
 
+function gotoBudget()
+{
+    model.app.currentpage = 'Budget';
+    updateView();
+}
 

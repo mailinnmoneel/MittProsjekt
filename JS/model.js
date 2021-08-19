@@ -20,7 +20,6 @@ const model = {
     tidsevent:{
          standardTimer: 24,
          klokkeDiv:"",
-         datoDiv: "",
          nedteller: "",
          distance:0,
          days: 0,
@@ -29,7 +28,7 @@ const model = {
          seconds: 0,
     },
 
-    app: { currentpage: 'TimeEvent',
+    app: { currentpage: 'Budget',
 
     },
 

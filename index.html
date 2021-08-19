@@ -16,10 +16,10 @@
     <script src="JS/viewMiddagsRullet.js"></script>
     <script src="JS/viewTimeEvent.js"></script>
     <script src="JS/viewToDo.js"></script>
+    <script src="JS/viewBudsjett.js"></script>
 
     <script src="JS/appController.js"></script>
     <script src="JS/middagsController.js"></script>
-
     <script src="JS/tidsEventController.js"></script>
     <script src="JS/todoListController.js"></script>
 </head>
@@ -39,6 +39,7 @@
             if(model.app.currentpage == 'MiddagsRullet') html = updateViewMiddagsRullet();
             if(model.app.currentpage == 'TimeEvent') html = updateViewTimeEvent();
             if(model.app.currentpage == 'ToDoList') html = updateViewTodolist();
+            if(model.app.currentpage == 'Budget') html = updateViewBudget();
             document.getElementById("app").innerHTML = html;
         }
 
