@@ -19,28 +19,44 @@ function updateViewTodolist(i)
 <div class="row">
 
         <div class="sideTodo">
-            .....
+            <p>Jeg er veldig glad i lister, notater, kalendere og generelt det å ha en plan skrevet ned fremfor å måtte gå og huske på alt i hodet.
+                Noe av det vi skal lære oss som er kjempenyttig med Javascript er objekter. 
+                På W3schools.com så står det at objekter er kongen, og at hvis du forstår objekter så forstår du Javascript.
+                Perfekt ikkesant?
+            </p>
+            </br>
+            <p>Denne Todo listen var for meg en super oppgave til læring av Javascript og å bruke objekter for første gang.
+                Så jeg kastet meg inn i undervisningsvideoen fra guruen vår Terje her på Get og her er resultatet.</p>
         </div>
 
         <div class="mainTodo">
             
             <form>
-                <h1>Legg til flere oppgaver</h1>
-                </hr>
-                <label for="personName"><b>Navn</b></label>
-                <input type="text" placeholder = "${model.message.nameField}" 
-                    name="persoNname" id="personName" 
-                    oninput = "model.personInput = this.value"/>
-                <label for="Task">Oppgave</b></label>
-                <input type="text" placeholder="${model.message.taskField}" 
-                    name="task" id="task" 
-                    oninput = "model.taskInput = this.value"/> 
-                <label for="dueDate"><b>Frist</b></label>
-                <input id="datoInput" type="date" 
-                    onchange = "model.dateInput = this.valueAsDate.toLocaleDateString().substr(0,10)">
-                ${model.message.dateField}
-                <button type="submit" class="registerbtn" 
-                    onclick="addTask()">Legg til</button>
+                    <h1>Legg til flere oppgaver</h1>
+                    </hr>
+
+                    <label for="personName"><b>Navn</b></label>
+
+                    <input type="text" placeholder = "${model.message.nameField}" 
+                        name="persoNname" id="personName" 
+                        oninput = "model.personInput = this.value"/>
+
+                    <label for="Task"><b>Oppgave</b></label>
+
+                    <input type="text" placeholder="${model.message.taskField}" 
+                        name="task" id="task" 
+                        oninput = "model.taskInput = this.value"/>
+
+                    <label for="dueDate"><b>Frist</b></label>
+
+                    <input id="datoInput" type="date" 
+                        onchange = "model.dateInput = this.valueAsDate.toLocaleDateString().substr(0,10)">
+
+                    ${model.message.dateField}
+
+                    <button type="submit" class="registerbtn" 
+                        onclick="addTask()">Legg til</button>
+                        
             </form> 
 
             <div id="registered"><b>${model.message.registeredField}</b></div>
@@ -48,12 +64,12 @@ function updateViewTodolist(i)
 
                 <table id="tableDiv">
                     <tr>
-                    <th>Name</th>    
-                    <th>Task</th>
+                    <th>Navn</th>    
+                    <th>Oppgave</th>
                     <th></th>
                     <th></th>
-                    <th>Duedate</th>
-                    <th>Date done</th>
+                    <th>Frist</th>
+                    <th>Gjort dato</th>
                     </tr> 
                     </table>
                     `
