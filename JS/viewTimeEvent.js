@@ -1,12 +1,9 @@
 //Tide
 function updateViewTimeEvent()
 {
-    // document.getElementById("app").innerHTML=
     let html = `
     
-    <div class="headertidsevent">
-        <h1>Tids Event</h1>
-        <h3>Fordi hvem glemmer vel ikke å vanne plantene sine</h3>
+    <div class="header">
     </div>
 
     <div class="navbar">
@@ -17,11 +14,14 @@ function updateViewTimeEvent()
     </div>
 
 <div class="row">
+
     <div class="side">
-        .....
+        <h3>Tids Event</h3>
+        <p>Fordi hvem glemmer vel ikke å vanne plantene sine?</p>
     </div>
 
     <div class="main">
+
         <div class="tidsevent">
             <div>Husk å vanne plantene om:</div>
             <div id="klokkeDiv"></div>
@@ -32,13 +32,16 @@ function updateViewTimeEvent()
             />
             <button onclick="changeHours()">Endre antall timer</button> 
             <button onclick="reset()">Reset</button>
-        </div>    
-    </div>        
+        </div>
+
+    </div>   
+
 </div>
 
 <div class="footer">
     <h2>Footer</h2>
 </div>
+
 `
 return html;
     

@@ -5,8 +5,8 @@ updateViewTodolist();
 function updateViewTodolist(i) 
 {       
         html = `
-<div class="headerTodo">
-    <h1>To Do Liste</h1>
+<div class="header">
+    
 </div>
 
 <div class="navbar">
@@ -18,18 +18,18 @@ function updateViewTodolist(i)
 
 <div class="row">
 
-        <div class="sideTodo">
+        <div class="side">
+            <h3>To Do Liste</h3>
             <p>Jeg er veldig glad i lister, notater, kalendere og generelt det å ha en plan skrevet ned fremfor å måtte gå og huske på alt i hodet.
                 Noe av det vi skal lære oss som er kjempenyttig med Javascript er objekter. 
                 På W3schools.com så står det at objekter er kongen, og at hvis du forstår objekter så forstår du Javascript.
                 Perfekt ikkesant?
-            </p>
-            </br>
-            <p>Denne Todo listen var for meg en super oppgave til læring av Javascript og å bruke objekter for første gang.
+                </br>
+                Denne Todo listen var for meg en super oppgave til læring av Javascript og å bruke objekter for første gang.
                 Så jeg kastet meg inn i undervisningsvideoen fra guruen vår Terje her på Get og her er resultatet.</p>
         </div>
 
-        <div class="mainTodo">
+        <div class="main">
             
             <form>
                     <h1>Legg til flere oppgaver</h1>

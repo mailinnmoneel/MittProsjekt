@@ -10,10 +10,9 @@ const model = {
         { person: 'Peter', description: 'Skifte olje', date: new Date().toLocaleDateString(), isDone: false },
         { person: 'Peter', description: 'Lufte hunden', date: new Date().toLocaleDateString(), isDone: false },
     ],
+
     dateInput: null,
     dateOutput: null,
-    app: { currentpage: 'todolist',
-    },
     personInput: null,
     taskInput: null,
     message: {nameField: '...', taskField: '...', dateField: ' ', registeredField: ''},
@@ -21,6 +20,7 @@ const model = {
     tidsevent:{
          standardTimer: 24,
          klokkeDiv:"",
+         datoDiv: "",
          nedteller: "",
          distance:0,
          days: 0,
@@ -28,15 +28,17 @@ const model = {
          minutes: 0,
          seconds: 0,
     },
-    app: { currentpage: 'ToDoList',
+
+    app: { currentpage: 'TimeEvent',
 
     },
+
     fredslilje: { kallenavn: "Fredslilje",
     vanneIntervallInput: "24", 
     },
+
     food : ['Kremet pasta med kylling',
             'Spaghetti med tomatsaus og kjøttbolle',
-            'Kremet pasta med laks',
             'Salat med avokado og kylling',
             'Couscoussalat med kylling og appelsin',
             'Reke og mangosalat',
@@ -46,11 +48,9 @@ const model = {
             'Vegetar Pizza',
             'Protein pannekaker med jordbær',
             'Haloumi Burger',
-            'Grandis',
             'Spaghetti og Kjøttboller',
             'Wok med nudler og grønnsaker',
             'Vegetartaco med søtpotet',
-            'Tapas',
             'Protein Pannekaker med jordbær',
             'Grønnsaks Wok', 
             'Haloumi Burger',
@@ -60,10 +60,11 @@ const model = {
             'Tapas med dadler og asparges surret i serranoskinke',
             'Biff med stekt tomat, småpoteter og soppsaus',
     ],
+
     foodInput: null,
 }
 
-let eatThisFood = 'Middags Rullet';
+let eatThisFood = '.......';
 
 
 

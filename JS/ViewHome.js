@@ -7,8 +7,7 @@ function updateViewHome()
     let html = `
     
     <div class="header">
-        <h1>Mailinn Moneel Kiste</h1>
-        <p>Mistakes are the portals of discovery.-James Joyce.</p>
+        
     </div>
 
     <div class="navbar">
@@ -21,7 +20,10 @@ function updateViewHome()
     <div class="row">
         <div class="side">
         <img src="bilde_Mailinn.jpg" style="width:400px";>
-            <button>Send meg en email</button>
+        <p>Navn: Mailinn Moneel Kiste</p>
+        <p>IT-utvikler Student hos Get Academy</p>
+        <button>Send meg en email</button>
+        <p>Mistakes are the portals of discovery.-James Joyce.</p>
         </div>
 
         <div class="main">

@@ -65,3 +65,4 @@ function changeHours()
   updateView();
 
 }
+
