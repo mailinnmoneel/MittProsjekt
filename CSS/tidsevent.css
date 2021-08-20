@@ -1,5 +1,8 @@
 .tidsevent {
-  padding: 3vh;
-  border: 1vh solid white;
-  width: 60vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #14365c;
+  color: #f9f9fa;
+  margin: 16px;
 }

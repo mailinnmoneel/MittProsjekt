@@ -24,15 +24,48 @@ function updateViewBudget()
     </div>
 
     <div class="main">
-        <h3>Work in progress</h3>
+        
+        <div class="rowbudget">
 
+            <div class="column">
+                <div class="card">
+                    <h1>Fyll inn budsjett</h1>
+                    <input type="number" this.value="${model.budsjett.inputbeløp}" placeholder="3500,-">
+                    <button>Gjør Utregning</button>
+                </div>
+            </div>        
+
+            <div class="column">
+                <div class="card">
+                    <h1>Fyll inn utgift</h1>
+                    <input type="text" this.value="${model.budsjett.utgifter}">
+                    <h1>Fyll inn beløp</h1>
+                    <input type="number" this.value="${model.budsjett.utgiftbeløp}">
+                    <button id="addUtgift()">Legg til utgift</button>
+                </div>    
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <div> fuglemat </div>
+                    <div> 175,- </div>
+                </div>    
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <h1>Balanse</h1>
+                    <div>${model.budsjett.utregning}</div>
+                </div>        
+            </div>
+
+        </div>        
     </div>
 
 </div>
 
 
 <div class="footer">
-    <h2>Footer</h2>
 </div>
     
     `

@@ -36,6 +36,15 @@ const model = {
     vanneIntervallInput: "24", 
     },
 
+    budsjett: {
+        inputbeløp: "null",
+        outputbeløp: "null",
+        utgifter: "null",
+        utgiftbeløp: "null", 
+        utregning: "",
+
+    },
+
     food : ['Kremet pasta med kylling',
             'Spaghetti med tomatsaus og kjøttbolle',
             'Salat med avokado og kylling',
