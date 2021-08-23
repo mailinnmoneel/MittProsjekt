@@ -21,24 +21,17 @@ function updateViewTimeEvent()
         <p>Fordi hvem glemmer vel ikke å vanne plantene sine?</p>
     </div>
 
-    <div class="main">
-
-        <div class="column">
-            <div class="tidsevent">
-                <div>Husk å vanne plantene om:</div>
-                <div id="klokkeDiv"></div>
-            </div>
-        
-            <div class="tidsevent">                
-                <input  type="number"
-                        placeholder="${standardTimer}"
-                        oninput="model.fredslilje.vanneIntervallInput=this.value"
-                />
-                <button onclick="changeHours()">Endre antall timer</button> 
-                <button onclick="reset()">Reset</button>
-            </div>    
-        </div>    
-
+    <div class="maintime">
+        <div>Husk å vanne plantene om:</div>
+        <div id="klokkeDiv"></div>             
+        <div id="edit">
+            <input id="planteinput" type="number"
+                placeholder="${standardTimer}"
+                oninput="model.fredslilje.vanneIntervallInput=this.value"
+            />
+            <button id="planteknapp" onclick="changeHours()">Endre antall timer</button> 
+            <button id="planteknapp" onclick="reset()">Reset</button>
+        </div>
     </div>   
 
 </div>

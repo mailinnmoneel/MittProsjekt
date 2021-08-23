@@ -24,7 +24,8 @@ function updateViewHome()
         <p>Navn: Mailinn Moneel Kiste</p>
         <p>IT-utvikler Student hos Get Academy</p>
         <button>Send meg en email</button>
-        <p>Mistakes are the portals of discovery.-James Joyce.</p>
+        <p>Ever tried. Ever failed. No matter. Try again. Fail again. Fail better. 
+            -Samuel Beckett</p>
         </div>
 
         <div class="main">
