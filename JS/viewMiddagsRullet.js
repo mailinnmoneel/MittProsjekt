@@ -55,3 +55,43 @@ return html;
     
 };
 
+function lagDialogBoks(headline, txt, btnText, color) {
+    const id = Math.floor(Math.random() * 1000000);
+    document.body.innerHTML += `
+        
+        <div id="${id}" style="
+                    background-color: lightgray;
+                    color: ${color};
+                    border: 2px solid green;
+                    border-radius: 5px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 300px;
+                    position: absolute;
+                    left: 40%;
+                    top: 50%;
+                    z-index: +1;
+                ">
+            <div style="
+                        background-color: ${color};
+                        color: white;
+                        width: 100%;
+                        text-align: center;
+                    ">
+                <h3>${headline}</h3>
+            </div>
+            <p style="padding: 10px;">
+                ${txt}
+            </p>
+            <p>
+                <button 
+                    onclick="closeDialog(${id})"
+                    style="width: 300px">
+                    ${btnText}
+                </button>
+        </div>
+        </div>
+    `;
+}

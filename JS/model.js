@@ -28,7 +28,7 @@ const model = {
          seconds: 0,
     },
 
-    app: { currentpage: 'Budget',
+    app: { currentpage: 'MiddagsRullet',
 
     },
 
