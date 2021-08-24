@@ -30,55 +30,56 @@ function updateViewTodolist(i)
                 Så jeg kastet meg inn i undervisningsvideoen fra guruen vår Terje her på Get og her er resultatet.</p>
         </div>
 
-        <div class="main">
-            
-            <form>
-                    <h1>Legg til flere oppgaver</h1>
-                    </hr>
+        <div class="maintodo">
+            <div class="todocontent">
+                <form>
+                        <h1>Legg til flere oppgaver</h1>
+                        </hr>
 
-                    <label for="personName"><b>Navn</b></label>
+                        <label for="personName"><b>Navn</b></label>
 
-                    <input type="text" placeholder = "${model.message.nameField}" 
-                        name="persoNname" id="personName" 
-                        oninput = "model.personInput = this.value"/>
+                        <input type="text" placeholder = "${model.message.nameField}" 
+                            name="persoNname" id="personName" 
+                            oninput = "model.personInput = this.value"/>
 
-                    <label for="Task"><b>Oppgave</b></label>
+                        <label for="Task"><b>Oppgave</b></label>
 
-                    <input type="text" placeholder="${model.message.taskField}" 
-                        name="task" id="task" 
-                        oninput = "model.taskInput = this.value"/>
+                        <input type="text" placeholder="${model.message.taskField}" 
+                            name="task" id="task" 
+                            oninput = "model.taskInput = this.value"/>
 
-                    <label for="dueDate"><b>Frist</b></label>
+                        <label for="dueDate"><b>Frist</b></label>
 
-                    <input id="datoInput" type="date" 
-                        onchange = "model.dateInput = this.valueAsDate.toLocaleDateString().substr(0,10)">
+                        <input id="datoInput" type="date" 
+                            onchange = "model.dateInput = this.valueAsDate.toLocaleDateString().substr(0,10)">
 
-                    ${model.message.dateField}
+                        ${model.message.dateField}
 
-                    <button type="submit" class="registerbtn" 
-                        onclick="addTask()">Legg til</button>
-                        
-            </form> 
+                        <button type="submit" class="registerbtn" 
+                            onclick="addTask()">Legg til</button>
+                            
+                </form> 
 
-            <div id="registered"><b>${model.message.registeredField}</b></div>
+                <div id="registered"><b>${model.message.registeredField}</b></div>
 
 
-                <table id="tableDiv">
-                    <tr>
-                    <th>Navn</th>    
-                    <th>Oppgave</th>
-                    <th></th>
-                    <th></th>
-                    <th>Frist</th>
-                    <th>Gjort dato</th>
-                    </tr> 
-                    </table>
-                    `
-                    ;
-                    for (let i = 0; i < model.tasks.length; i++)
-                        {html += createTableRow(i)
-                    ;} 
-                    html += `
+                    <table>
+                        <tr>
+                        <th>Navn</th>    
+                        <th>Oppgave</th>
+                        <th></th>
+                        <th></th>
+                        <th>Frist</th>
+                        <th>Gjort dato</th>
+                        </tr> 
+                        </table>
+                        `
+                        ;
+                        for (let i = 0; i < model.tasks.length; i++)
+                            {html += createTableRow(i)
+                        ;} 
+                        html += `
+            </div>
         </div>        
 </div>
 

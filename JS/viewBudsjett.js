@@ -23,13 +23,13 @@ function updateViewBudget()
         </p>
     </div>
 
-    <div class="main">
+    <div class="mainbudget">
         
         <div class="rowbudget">
 
             <div class="column">
                 <div class="card">
-                    <h1>Fyll inn budsjett</h1>
+                    <h2>Fyll inn budsjett</h2>
                     <input type="number" this.value="${model.budsjett.inputbeløp}" placeholder="3500,-">
                     <button>Gjør Utregning</button>
                 </div>
@@ -37,9 +37,9 @@ function updateViewBudget()
 
             <div class="column">
                 <div class="card">
-                    <h1>Fyll inn utgift</h1>
+                    <h2>Fyll inn utgift</h2>
                     <input type="text" this.value="${model.budsjett.utgifter}">
-                    <h1>Fyll inn beløp</h1>
+                    <h2>Fyll inn beløp</h2>
                     <input type="number" this.value="${model.budsjett.utgiftbeløp}">
                     <button id="addUtgift()">Legg til utgift</button>
                 </div>    
@@ -47,14 +47,13 @@ function updateViewBudget()
 
             <div class="column">
                 <div class="card">
-                    <div> fuglemat </div>
-                    <div> 175,- </div>
+                    
                 </div>    
             </div>
 
             <div class="column">
                 <div class="card">
-                    <h1>Balanse</h1>
+                    <h2>Balanse</h2>
                     <div>${model.budsjett.utregning}</div>
                 </div>        
             </div>

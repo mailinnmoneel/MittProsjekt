@@ -28,7 +28,7 @@ function updateViewMiddagsRullet()
         </p>
     </div>
 
-    <div class="main">
+    <div class="mainmiddag">
 
         <div class="parent">
             <h3> Usikker på hva du vil spise til middag i dag?</h3>
@@ -60,19 +60,19 @@ function lagDialogBoks(headline, txt, btnText, color) {
     document.body.innerHTML += `
         
         <div id="${id}" style="
-                    background-color: lightgray;
+                    background-color: white;
                     color: ${color};
-                    border: 2px solid green;
+                    border: none;
                     border-radius: 5px;
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    width: 300px;
+                    width: 50%;
                     position: absolute;
-                    left: 40%;
+                    left: 30%;
                     top: 50%;
-                    z-index: +1;
+                    z-index: 1;
                 ">
             <div style="
                         background-color: ${color};

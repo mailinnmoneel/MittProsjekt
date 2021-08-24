@@ -1,16 +1,25 @@
 .parent {
     display: grid;    
-    background-color: #8ca3a3;
-    color: #563f46;
-    border: solid #563f46;
-    height: 50vh;
-    width: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2017/11/08/22/18/spaghetti-2931846_960_720.jpg"); 
+    height: 60vh;
     text-shadow: 1px 1px black;
     place-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white; 
 }
 
+.mainmiddag {
+    flex: 70%; 
+    background-color: white; 
+    /* padding: 20px;  */
+  }
+
+
 #rulletDiv {
-    background-color: #563f46;
+    background-color: #333;
     color: white;
     padding: 3vh;
     text-align: center;
@@ -26,12 +35,12 @@
 #rulletDiv:hover,
 #rulletDiv:focus {
     background-color: #c8c3cc;
-    color: #563f46;
+    color: #333;
     text-shadow: 1px 1px black;
 }
 
 #suggestionDiv {
-    color: #563f46;
+    color: white;
     padding: 3vh;
     text-align: center;
     text-decoration: none;
@@ -46,22 +55,23 @@
 }
 
 #foodSuggestions {
-    background-color: #484f4f;
+    background-color: #333;
     color: white;
     font-size: 14px;
     text-shadow: 2px 2px black;
     padding: 5px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 #registerButton {
-    background-color: #484f4f;
+    background-color: #333;
     color: white;
     font-size: 14px;
     cursor: pointer;
     text-shadow: 1px 1px black;
     padding: 5px 10px;
     border-radius: 5px;
-    /* width: 30vh; */
+    margin-bottom: 10px;
 }
 

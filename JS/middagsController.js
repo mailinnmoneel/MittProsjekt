@@ -11,18 +11,15 @@ function addFood()
     let newFood = model.foodInput;
 
     if (isEmptyOrSpaces(newFood) == true) 
-    { 
-        alert("Du må skrive noe i feltet"
-    ); 
-    return; }
+    { return; }
 
     model.food.push(newFood);
     
     lagDialogBoks(
-        'Ønsket er registrert',
-        'Takk for forslaget.',
+        'Ønsket er registrert :) ',
+        'Takk for forslaget!',
         'Ok',
-        'green');
+        '#4B0082');
 
    
         
