@@ -19,7 +19,7 @@ function updateViewMiddagsRullet()
 
 <div class="row">
     <div class="side">
-        <h3>Middags Rullet</h3>
+        <h3>Middags Rulett</h3>
         <p>Alle starter et sted og det er en god ting å ha noen små prosjekter ved siden av skolen.
             Her er mitt første lille prosjekt som var gøy å lage. Ikke så vanskelig heller, med litt hjelp såklart.
             </br>

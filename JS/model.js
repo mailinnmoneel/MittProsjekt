@@ -28,7 +28,7 @@ const model = {
          seconds: 0,
     },
 
-    app: { currentpage: 'MiddagsRullet',
+    app: { currentpage: 'Budget',
 
     },
 
@@ -41,12 +41,12 @@ const model = {
         outputbeløp: "null",
         utgifter: "null",
         utgiftbeløp: "null", 
-        utregning: "",
+        utregning: "Utregning",
 
     },
 
     food : ['Kremet pasta med kylling',
-            'Spaghetti med tomatsaus og kjøttbolle',
+            'Spaghetti med tomatsaus og kjøttboller',
             'Salat med avokado og kylling',
             'Couscoussalat med kylling og appelsin',
             'Reke og mangosalat',
@@ -60,7 +60,7 @@ const model = {
             'Wok med nudler og grønnsaker',
             'Vegetartaco med søtpotet',
             'Protein Pannekaker med jordbær',
-            'Grønnsaks Wok', 
+            'GrønnsaksWok', 
             'Haloumi Burger',
             'Biff og Grønnsaker',
             'Kyllingsalat', 
