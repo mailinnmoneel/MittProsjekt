@@ -1,20 +1,20 @@
 .parent {
     display: grid;    
-    background-image: url("https://cdn.pixabay.com/photo/2017/11/08/22/18/spaghetti-2931846_960_720.jpg"); 
+    place-items: center;
     height: 60vh;
     text-shadow: 1px 1px black;
-    place-items: center;
+    padding: 20px;
+}
+
+.mainmiddag {
+    flex: 70%; 
+    background-image: url("https://cdn.pixabay.com/photo/2017/11/08/22/18/spaghetti-2931846_960_720.jpg"); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     color: white; 
-}
-
-.mainmiddag {
-    flex: 70%; 
-    background-color: white; 
-    /* padding: 20px;  */
+    height: 100vh;
   }
 
 
