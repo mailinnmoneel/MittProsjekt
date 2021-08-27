@@ -36,14 +36,10 @@ const model = {
     vanneIntervallInput: "24", 
     },
 
-    budsjett: {
-        inputbeløp: "null",
-        outputbeløp: "null",
-        utgifter: "null",
-        utgiftbeløp: "null", 
-        utregning: "Utregning",
-
-    },
+    budgetinputs: { amount: 0, title: "", expence: 0, },
+    budgetresult : [
+        {expenceamount: 0, expencetitle: "", total: 0, date: new Date().toLocaleDateString(), }
+    ],
 
     food : ['Kremet pasta med kylling',
             'Spaghetti med tomatsaus og kjøttboller',

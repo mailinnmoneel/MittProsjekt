@@ -22,6 +22,7 @@ function updateViewMiddagsRullet()
         <h3>Middags Rulett</h3>
         <p>Alle starter et sted og det er en god ting å ha noen små prosjekter ved siden av skolen.
             Her er mitt første lille prosjekt som var gøy å lage. Ikke så vanskelig heller, med litt hjelp såklart.
+            Dette er et veldig fint lite prosjekt for å lære mer om bruk av lister.  
             </br>
             Alle har den ene vennen som aldri vet hva de vil spise, så her, vær så god, en liten applikasjon som kommer med 
             forslag for deg. Bare trykk på knappen.

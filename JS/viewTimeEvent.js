@@ -19,6 +19,9 @@ function updateViewTimeEvent()
     <div class="side">
         <h3>Tids Event</h3>
         <p>Fordi hvem glemmer vel ikke å vanne plantene sine?</p>
+        <p> Denne startet som min første obligatoriske oppgave etter bare 4 uker med koding på Get. Og er den oppgaven som sålangt har bydd på mest utfordring og til tider litt frustrasjon. 
+            Jeg lærte mye om Javascript og designmønsteret MVC, men også verdien av å ikke gi opp og ikke være redd for å feile og prøve igjen.  
+            </p>
     </div>
 
     <div class="maintime">

@@ -1,6 +1,8 @@
-//Starten på budsjett applikasjon. Spennende ikkesant? Denne er ikke ferdig. Work in progress med andre ord. 
+// Work in progress. 
 
-function updateViewBudget()
+
+
+function updateViewBudget(i)
 {
     html = `
     <div class="header">
@@ -28,26 +30,74 @@ function updateViewBudget()
         <div class="rowbudget">
                 
             <h2>Fyll inn budsjett</h2>
-            <input type="number" this.value="${model.budsjett.inputbeløp}" placeholder="3500,-">
-            <button>Legg til</button>
+            <input 
+                type="number" 
+                oninput = "model.budgetinputs.amount = this.value"
+            >
+            <button onclick = "utregning()" >Legg til</button>
             <h2>Fyll inn utgift</h2>
-            <input type="text" this.value="${model.budsjett.utgifter}"placeholder="fuglemat">
+            <input 
+                type="text" 
+                oninput = "model.budgetinputs.title = this.value"
+            >
             <h2>Fyll inn beløp</h2>
-            <input type="number" this.value="${model.budsjett.utgiftbeløp}" placeholder="200,-">
-            <button id="addUtgift()">Legg til</button>
+            <input 
+                type="number" 
+                oninput = "model.budgetinputs.expence = this.value" 
+            >
+            <button onclick = "utregning()" >Legg til</button>
             </br>
-            ${model.budsjett.utregning}
-                
+            ${model.budgetresult[0].total}
+            
+            `
+            for(let i = 0; i < model.budgetresult.length; i++) 
+                {html+= createExpencesRow();} 
+            html+= `    
+
         </div>        
     </div>
 
 </div>
 
-
 <div class="footer">
 </div>
     
-    `
+    ` 
     return html;
-    
 };
+
+function createExpencesRow(i)
+    {
+        const expencetitle = model.budgetresult[i];
+        const expenceamount = model.budgetresult[i];
+        return`
+            
+        <li>${expencetitle}</li>
+     
+    `
+};
+
+// budgetinputs: { amount: 0, title: "", expence: 0, },
+//     budgetresult : [
+//         {expenceamount: 0, expencetitle: "", total: 0, date: new Date().toLocaleDateString(), }
+//     ],
+
+
+//controller Budsjett
+//Utregning ikke ferdig, eller foolproof
+
+function utregning(i) 
+{   
+    var income = parseInt(model.budgetinputs.amount);
+    var expences = parseInt(model.budgetinputs.expence); 
+    var sum = income - expences;
+
+    model.budgetresult[i].total = sum;
+
+    model.budgetresult[i].expencetitle = model.budgetinputs.expence;
+
+    updateView();
+
+    console.log();
+}
+
