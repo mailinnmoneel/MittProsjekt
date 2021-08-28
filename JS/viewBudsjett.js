@@ -28,6 +28,10 @@ function updateViewBudget(i)
     <div class="mainbudget">
         
         <div class="rowbudget">
+            <div class="resultDiv">
+                <h2> Budsjett Kr: ${model.budgetinputs.amount},-</h2>
+                <h2> Utregning etter utgifter: ${model.budgetinputs.sum},-</h2>
+            </div>
             <div class="inputsDiv">
                 <p>Fyll inn budsjett</p>
                 <input 
@@ -51,11 +55,10 @@ function updateViewBudget(i)
                     class="budgetButton"
                     onclick = "utregning()">Legg til</button>
             </div>
-            <div class="resultDiv">
-                <b> Budsjett Kr: ${model.budgetinputs.amount},-</b>
-                <b> Utregning etter utgifter: ${model.budgetinputs.sum},-</b>
-            </div>
-        </div> 
+        </div>
+        <ul>
+            <h2>Utgifter</h2>
+        </ul>
             `
             
             for(let i = 1; i < model.budgetresult.length; i++) 
