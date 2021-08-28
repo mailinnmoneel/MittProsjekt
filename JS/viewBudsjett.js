@@ -1,8 +1,9 @@
 // Work in progress. 
+
 updateViewBudget();
 
 function updateViewBudget(i)
-{
+{   
     html = `
     <div class="header">
     
@@ -27,26 +28,34 @@ function updateViewBudget(i)
     <div class="mainbudget">
         
         <div class="rowbudget">
-                
-            <h2>Fyll inn budsjett</h2>
-            <input 
-                type="number" 
-                oninput = "model.budgetinputs.amount = this.value"
-            >
-            <button onclick = "utregning()" >Legg til</button>
-            <h2>Fyll inn utgift</h2>
-            <input 
-                type="text" 
-                oninput = "model.budgetinputs.title = this.value"
-            >
-            <h2>Fyll inn beløp</h2>
-            <input 
-                type="number" 
-                oninput = "model.budgetinputs.expence = this.value" 
-            >
-            <button onclick = "utregning()" >Legg til</button>
-            </br>
-            
+            <div class="inputsDiv">
+                <p>Fyll inn budsjett</p>
+                <input 
+                    class="budgetInput"
+                    type="number" 
+                    oninput = "model.budgetinputs.amount = this.value"
+                >
+                <p>Fyll inn utgift</p>
+                <input 
+                    class="budgetInput"
+                    type="text" 
+                    oninput = "model.budgetinputs.title = this.value"
+                >
+                <p>Fyll inn beløp</p>
+                <input 
+                    class="budgetInput"
+                    type="number" 
+                    oninput = "model.budgetinputs.expence = this.value" 
+                >
+                <button
+                    class="budgetButton"
+                    onclick = "utregning()">Legg til</button>
+            </div>
+            <div class="resultDiv">
+                <b> Budsjett Kr: ${model.budgetinputs.amount},-</b>
+                <b> Utregning etter utgifter: ${model.budgetinputs.sum},-</b>
+            </div>
+        </div> 
             `
             
             for(let i = 1; i < model.budgetresult.length; i++) 
@@ -54,7 +63,7 @@ function updateViewBudget(i)
             ;} 
             html+= `    
 
-        </div>        
+               
     </div>
 
 </div>
@@ -69,17 +78,18 @@ function updateViewBudget(i)
 
 function createExpencesRow(i)
     {
-        const budgetamount = model.budgetresult[i];
-        const exptitle = model.budgetresult[i];
-        const expamount = model.budgetresult[i];
-        const exptot = model.budgetresult[i];
+    // const exptot = model.budgetresult[i];
+    // const budgetamount = model.budgetresult[i];
+    const exptitle = model.budgetresult[i];
+    const expamount = model.budgetresult[i];
         return`
-
-        <div> Budsjett ${budgetamount.expenceamount} </div>
-        <div> Navn på utgiftpost ${exptitle.expencetitle} </div>
-        <div> Beløp for utgift ${expamount.titleamount} </div>
-        <div> Utregning etter utgifter ${exptot.total} </div>
-      
+    <ul>
+        <li>
+            Hva: ${exptitle.expencetitle}</li>
+            Beløp Kr: ${expamount.titleamount},-
+        </li>
+    </ul>
+   
      
     `
 };
@@ -97,14 +107,37 @@ function utregning(i)
     var income = parseInt(model.budgetinputs.amount);
     var expences = parseInt(model.budgetinputs.expence); 
     model.budgetinputs.sum = income - expences;
-    
+    //Trenger funksjon for income + income
+    // Funksjon for å bare legge til budsjett
+    // Funksjon for å bare legge til utgift
+
+    // if(emptyInputBudget() === true) { return; }
+
     model.budgetresult.push({
-        expenceamount: model.budgetinputs.amount,
         expencetitle: model.budgetinputs.title,
         titleamount: model.budgetinputs.expence,
-        total: model.budgetinputs.sum,
+        // total: model.budgetinputs.sum,
+        // expenceamount: model.budgetinputs.amount,
     });
 
+    model.budgetresult[0].expenceamount = model.budgetinputs.amount;
+    model.budgetresult[0].total = model.budgetinputs.sum;
+
+
     updateView();
+    clearInputs();
 }
 
+function clearInputs()
+{
+    model.budgetinputs.amount = null;
+    model.budgetinputs.title = null;
+    model.budgetinputs.expence = null;
+    model.budgetinputs.sum = null;
+
+}
+
+function emptyInputBudget()
+{
+    return model.budgetinputs.amount === null || model.budgetinputs.amount.match(/^ *$/) !==null;
+}
