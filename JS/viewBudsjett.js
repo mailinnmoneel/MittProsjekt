@@ -1,6 +1,5 @@
 // Work in progress. 
-
-
+updateViewBudget();
 
 function updateViewBudget(i)
 {
@@ -47,11 +46,12 @@ function updateViewBudget(i)
             >
             <button onclick = "utregning()" >Legg til</button>
             </br>
-            ${model.budgetresult[0].total}
             
             `
-            for(let i = 0; i < model.budgetresult.length; i++) 
-                {html+= createExpencesRow();} 
+            
+            for(let i = 1; i < model.budgetresult.length; i++) 
+                {html+= createExpencesRow(i)
+            ;} 
             html+= `    
 
         </div>        
@@ -66,38 +66,45 @@ function updateViewBudget(i)
     return html;
 };
 
+
 function createExpencesRow(i)
     {
-        const expencetitle = model.budgetresult[i];
-        const expenceamount = model.budgetresult[i];
+        const budgetamount = model.budgetresult[i];
+        const exptitle = model.budgetresult[i];
+        const expamount = model.budgetresult[i];
+        const exptot = model.budgetresult[i];
         return`
-            
-        <li>${expencetitle}</li>
+
+        <div> Budsjett ${budgetamount.expenceamount} </div>
+        <div> Navn på utgiftpost ${exptitle.expencetitle} </div>
+        <div> Beløp for utgift ${expamount.titleamount} </div>
+        <div> Utregning etter utgifter ${exptot.total} </div>
+      
      
     `
 };
-
-// budgetinputs: { amount: 0, title: "", expence: 0, },
-//     budgetresult : [
-//         {expenceamount: 0, expencetitle: "", total: 0, date: new Date().toLocaleDateString(), }
-//     ],
+// const model = {
+//                   budgetinputs: { amount: 0, title: "", expence: 0, sum: 0,},
+//                   budgetresult : [
+//                       {expenceamount: 0, expencetitle: "", titleamount: 0, total: 0, date: new Date().toLocaleDateString(), }
+//                   ],
 
 
 //controller Budsjett
-//Utregning ikke ferdig, eller foolproof
-
+//Utregning ikke foolproof
 function utregning(i) 
 {   
     var income = parseInt(model.budgetinputs.amount);
     var expences = parseInt(model.budgetinputs.expence); 
-    var sum = income - expences;
-
-    model.budgetresult[i].total = sum;
-
-    model.budgetresult[i].expencetitle = model.budgetinputs.expence;
+    model.budgetinputs.sum = income - expences;
+    
+    model.budgetresult.push({
+        expenceamount: model.budgetinputs.amount,
+        expencetitle: model.budgetinputs.title,
+        titleamount: model.budgetinputs.expence,
+        total: model.budgetinputs.sum,
+    });
 
     updateView();
-
-    console.log();
 }
 
