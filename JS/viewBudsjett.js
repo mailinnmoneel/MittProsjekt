@@ -20,7 +20,7 @@ function updateViewBudget(i)
 
     <div class="side">
         <h3>Budsjett Applikasjon</h3>
-        <p>Starten på en budsjett applikasjon. Spennende ikkesant? Denne er ikke ferdig. Work in progress med andre ord.
+        <p>Starten på en budsjett applikasjon. Denne er ikke ferdig. Work in progress.
         </p>
     </div>
 
