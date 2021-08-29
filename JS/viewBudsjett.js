@@ -5,9 +5,7 @@ updateViewBudget();
 function updateViewBudget(i)
 {   
     html = `
-    <div class="header">
-    
-    </div>
+    <div class="header"></div>
     
     <div class="navbar">
         <a href="#Hjem" onclick="gotoHome()">Hjem</a>
@@ -25,52 +23,66 @@ function updateViewBudget(i)
         </p>
     </div>
 
-    <div class="mainbudget">
-        
-        <div class="rowbudget">
-            <div class="resultDiv">
-                <h2> Budsjett Kr: ${model.budgetinputs.amount},-</h2>
-                <h2> Utregning etter utgifter: ${model.budgetinputs.sum},-</h2>
-            </div>
-            <div class="inputsDiv">
-                <p>Fyll inn budsjett</p>
+    <div class="mainbudget">        
+        <div class="resultDiv">
+            <h2> Budsjett Kr: ${model.budgetinputs.amount},-</h2>
+            <h2> Utregning etter utgifter: ${model.budgetinputs.sum},-</h2>
+        </div>
+        <div class="customGrid">
+            <form class="chooseMonth">
+                <label>Velg måned</label>
+                <input  
+                    class="budgetInput"
+                    title="Velg måned, Feks. September"
+                >                    
+                <label>Fyll inn budsjett</label>
                 <input 
                     class="budgetInput"
                     type="number" 
                     oninput = "model.budgetinputs.amount = this.value"
                 >
-                <p>Fyll inn utgift</p>
-                <input 
-                    class="budgetInput"
-                    type="text" 
-                    oninput = "model.budgetinputs.title = this.value"
-                >
-                <p>Fyll inn beløp</p>
-                <input 
-                    class="budgetInput"
-                    type="number" 
-                    oninput = "model.budgetinputs.expence = this.value" 
-                >
-                <button
-                    class="budgetButton"
-                    onclick = "utregning()">Legg til</button>
+                <button id="addMonthBudget()" class="budgetButton">Legg til</button>
+            </form>
+
+            <div class="rowbudget">
+                <form class="inputsDiv">
+                   
+                    <label>Fyll inn utgift</label>
+                    <input 
+                        class="budgetInput"
+                        type="text" 
+                        oninput = "model.budgetinputs.title = this.value"
+                    >
+                    <label>Fyll inn beløp</label>
+                    <input 
+                        class="budgetInput"
+                        type="number" 
+                        oninput = "model.budgetinputs.expence = this.value" 
+                    >
+                    <button
+                        class="budgetButton"
+                        onclick = "utregning()">Legg til</button>
+                </form>
+            </div>
+            
+            <div class="utgifterBlokk">
+                <h2>Utgifter</h2>
+                <div class="grid-container">    
+                    <div class="grid-item">Hva</div>
+                    <div class="grid-item">Beløp</div>
+                
+                    `
+                    
+                    for(let i = 1; i < model.budgetresult.length; i++) 
+                        {html+= createExpencesRow(i)
+                    ;} 
+                    html+= `    
+
+                </div>
             </div>
         </div>
-        <ul>
-            <h2>Utgifter</h2>
-        </ul>
-            `
-            
-            for(let i = 1; i < model.budgetresult.length; i++) 
-                {html+= createExpencesRow(i)
-            ;} 
-            html+= `    
-
-               
     </div>
-
 </div>
-
 <div class="footer">
 </div>
     
@@ -86,14 +98,9 @@ function createExpencesRow(i)
     const exptitle = model.budgetresult[i];
     const expamount = model.budgetresult[i];
         return`
-    <ul>
-        <li>
-            Hva: ${exptitle.expencetitle}</li>
-            Beløp Kr: ${expamount.titleamount},-
-        </li>
-    </ul>
-   
-     
+
+    <div class="grid-item">${exptitle.expencetitle}</div>
+    <div class="grid-item">${expamount.titleamount},-</div>     
     `
 };
 // const model = {

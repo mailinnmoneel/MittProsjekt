@@ -2,7 +2,7 @@
 .maintodo {
   flex: 70%; 
   background-image: url("https://cdn.pixabay.com/photo/2015/06/08/15/11/typewriter-801921_960_720.jpg"); 
-  height: 100vh;
+  /* height: 100vh; */
   place-items: center;
   background-position: center;
   background-repeat: no-repeat;

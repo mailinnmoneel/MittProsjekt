@@ -1,7 +1,7 @@
 .maintime {
 flex: 70%; 
 min-height: 400px;
-height: 100vh;
+/* height: 100vh; */
 background-color: white; 
 padding: 20px; 
 background-image: url("https://cdn.pixabay.com/photo/2018/01/24/11/25/nature-3103701_960_720.jpg");
