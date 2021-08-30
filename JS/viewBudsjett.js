@@ -39,9 +39,9 @@ function updateViewBudget(i)
                 <input 
                     class="budgetInput"
                     type="number" 
-                    oninput = "model.budgetinputs.amount = this.value"
+                    oninput = "model.budgetinputs.amount=this.value"
                 >
-                <button id="addMonthBudget()" class="budgetButton">Legg til</button>
+                <button onclick="addMonthBudget()" class="budgetButton">Legg til</button>
             </form>
 
             <div class="rowbudget">
@@ -61,7 +61,7 @@ function updateViewBudget(i)
                     >
                     <button
                         class="budgetButton"
-                        onclick = "utregning()">Legg til</button>
+                        onclick = "calculateExpences()">Legg til</button>
                 </form>
             </div>
             
@@ -90,7 +90,7 @@ function updateViewBudget(i)
     return html;
 };
 
-
+//View utgifter rad
 function createExpencesRow(i)
     {
     // const exptot = model.budgetresult[i];
@@ -103,6 +103,7 @@ function createExpencesRow(i)
     <div class="grid-item">${expamount.titleamount},-</div>     
     `
 };
+
 // const model = {
 //                   budgetinputs: { amount: 0, title: "", expence: 0, sum: 0,},
 //                   budgetresult : [
@@ -111,28 +112,33 @@ function createExpencesRow(i)
 
 
 //controller Budsjett
-//Utregning ikke foolproof
-function utregning(i) 
+function addMonthBudget() 
 {   
-    var income = parseInt(model.budgetinputs.amount);
-    var expences = parseInt(model.budgetinputs.expence); 
-    model.budgetinputs.sum = income - expences;
-    //Trenger funksjon for income + income
-    // Funksjon for å bare legge til budsjett
-    // Funksjon for å bare legge til utgift
+    var income = parseInt(model.budgetinputs.amount); //Budsjettet for måneded
+    var expences = parseInt(model.budgetinputs.expence); //Beløp på utgift
+    model.budgetinputs.sum = income - expences; // Budsjett - utgift
 
-    // if(emptyInputBudget() === true) { return; }
+    if(emptyInputBudget() === true) { return; } //Usikker på om denne slår til
 
-    model.budgetresult.push({
-        expencetitle: model.budgetinputs.title,
-        titleamount: model.budgetinputs.expence,
-        // total: model.budgetinputs.sum,
-        // expenceamount: model.budgetinputs.amount,
+    model.budgetresult.push({    //Pusher inputs inn i array
+        expencetitle: model.budgetinputs.title,  //tittel på utgift
+        titleamount: model.budgetinputs.expence, // beløp på utgift
+        // total: model.budgetinputs.sum,  //husker ikke hva jeg tenkte her
+        // expenceamount: model.budgetinputs.amount, //eller her
     });
 
     model.budgetresult[0].expenceamount = model.budgetinputs.amount;
     model.budgetresult[0].total = model.budgetinputs.sum;
 
+
+    updateView();
+    clearInputs();
+}
+
+//Utregning
+function calculateExpences(i) 
+{    
+    // Funksjon for å bare legge til utgift
 
     updateView();
     clearInputs();
