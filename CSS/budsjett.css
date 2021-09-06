@@ -7,10 +7,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  /* height: 100vh; */
 }
 * {
   box-sizing: border-box;
+}
+
+/* Endrer farge på checkboksen */
+input {
+  accent-color: #333;
 }
 
 h2 {
@@ -25,9 +29,6 @@ h2 {
 .rowbudget {
   color: white;
   display: grid;
-  /* grid-template-columns: 30% 70%; */
-  /* width: 50%; */
-  /* margin-bottom: 5rem; */
 } 
 .chooseMonth{
   padding-top: 1.4rem;
@@ -35,9 +36,7 @@ h2 {
 }
 
 .resultDiv {
-  /* margin: 5px; */
   width: 100%;
-  /* text-align: center; */
   border-bottom: 1px solid white;
 }
 
