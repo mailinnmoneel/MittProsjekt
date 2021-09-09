@@ -40,7 +40,7 @@ function updateViewBudget(i)
                 >
                 <button
                 class="budgetButton"
-                onclick = "upDateYourBudget()">Nytt budsjett</button>
+                onclick = "upDateYourBudget()">Registrer nytt beløp</button>
             </form>
 
             <div class="rowbudget">
@@ -62,7 +62,7 @@ function updateViewBudget(i)
                     >
                     <button
                         class="budgetButton"
-                        onclick = "calculate()">Regn ut</button>
+                        onclick = "calculate()">Legg til utgift</button>
                 </form>
             </div>
             
@@ -90,7 +90,8 @@ function updateViewBudget(i)
     ` 
     return html;
 };
-
+//Plan fredag 1. hover effekt på knappene
+//If setning på nytt budsjett som sjekker tom input
 function createExpencesRow(i)
     {
   
