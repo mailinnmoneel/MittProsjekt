@@ -38,7 +38,7 @@ const model = {
 
     budgetinputs: { amount: 0, title: "", expence: 0, sum: 0, },
     budgetresult : [
-        {expenceamount: 0, expencetitle: "", titleamount: 0, total: 0, date: new Date().toLocaleDateString(), }
+        {expenceamount: 0, expencetitle: "Pellets", titleamount: 250, total: 0, date: new Date().toLocaleDateString(), }
     ],
 
     food : ['Kremet pasta med kylling',
