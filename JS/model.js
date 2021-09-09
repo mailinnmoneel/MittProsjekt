@@ -35,10 +35,10 @@ const model = {
     fredslilje: { kallenavn: "Fredslilje",
     vanneIntervallInput: "24", 
     },
-
-    budgetinputs: { amount: 0, title: "", expence: 0, sum: 0, },
+    budget: {budgetfixed: 20000,},
+    budgetinputs: { amount: 20000, title: "", expence: 0, sum: 0, },
     budgetresult : [
-        {expenceamount: 0, expencetitle: "Pellets", titleamount: 250, total: 0, date: new Date().toLocaleDateString(), }
+        {expenceamount: 0, expencetitle: "Pellets", titleamount: 250, total: 0, }
     ],
 
     food : ['Kremet pasta med kylling',

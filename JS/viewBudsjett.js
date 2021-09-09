@@ -25,8 +25,9 @@ function updateViewBudget(i)
 
     <div class="mainbudget">        
         <div class="resultDiv">
-            <h2> Budsjett Kr: ${model.budgetinputs.amount},-</h2>
+            <h2> Budsjett: ${model.budget.budgetfixed},-</h2>
             <h2> Utregning etter utgifter: ${model.budgetinputs.sum},-</h2>
+            <p style="color:white;"> Budsjett før siste regning ${model.budgetinputs.amount},- </p>
         </div>
         <div class="customGrid">
             <form class="chooseMonth">                
@@ -34,8 +35,12 @@ function updateViewBudget(i)
                 <input 
                     class="budgetInput"
                     type="number" 
+                    placeholder = "Beløp"
                     oninput = "model.budgetinputs.amount=this.value"
                 >
+                <button
+                class="budgetButton"
+                onclick = "upDateYourBudget()">Nytt budsjett</button>
             </form>
 
             <div class="rowbudget">
@@ -45,12 +50,14 @@ function updateViewBudget(i)
                     <input 
                         class="budgetInput"
                         type="text" 
+                        placeholder="Tittel"
                         oninput = "model.budgetinputs.title = this.value"
                     >
                     <label>Fyll inn beløp</label>
                     <input 
                         class="budgetInput"
                         type="number" 
+                        placeholder="Beløp"
                         oninput = "model.budgetinputs.expence = this.value" 
                     >
                     <button
@@ -67,7 +74,7 @@ function updateViewBudget(i)
                 
                     `
                     
-                    for(let i = 0; i < model.budgetresult.length; i++) 
+                    for(let i = 1; i < model.budgetresult.length; i++) 
                         {html+= createExpencesRow(i)
                     ;} 
                     html+= `    
@@ -84,7 +91,6 @@ function updateViewBudget(i)
     return html;
 };
 
-//View utgifter rad
 function createExpencesRow(i)
     {
   
@@ -97,36 +103,40 @@ function createExpencesRow(i)
         `
     };
 
+//controllers
 
-//controller Budsjett
-function calculate() 
-{   
-    var income = parseInt(model.budgetinputs.amount); 
-    var expences = parseInt(model.budgetinputs.expence); 
-    model.budgetinputs.sum = income - expences; 
+function upDateYourBudget()
+{    
+    model.budget.budgetfixed = model.budgetinputs.amount; 
 
+    updateView();
     
+}
+
+function calculate() 
+{  
+    const budsjett = parseInt(model.budgetinputs.amount); 
+    let utgifter = parseInt(model.budgetinputs.expence); 
+
+    let calculation = budsjett - utgifter;
+    model.budgetinputs.sum = parseInt(calculation);
+  
     model.budgetresult.push({    
         expencetitle: model.budgetinputs.title,  
         titleamount: model.budgetinputs.expence, 
      
     });
-
     updateView();
     clearInputs();
 }
 
-
 function clearInputs()
 {
-    model.budgetinputs.amount = income;
+    model.budgetinputs.amount = model.budgetinputs.sum;
     model.budgetinputs.title = null;
-    model.budgetinputs.expence = null;
+    model.budgetinputs.expence = 0;
     model.budgetinputs.sum = 0;
-
 }
 
-// function emptyInputBudget()
-// {
-//     return model.budgetinputs.amount === null || model.budgetinputs.amount.match(/^ *$/) !==null;
-// }
+
+
