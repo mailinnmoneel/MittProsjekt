@@ -12,12 +12,20 @@
   box-sizing: border-box;
 }
 
+
+#suggestionDiv {
+  background-color: black;
+  width: 100%;
+  border-radius: 10px;
+  opacity: 80%;
+}
+
 /* Endrer farge på checkboksen */
 input {
   accent-color: #333;
 }
 
-h2 {
+#hBudsj {
   color: white;
 }
 
@@ -98,6 +106,11 @@ h2 {
   border: none;
   background: #f1f1f1;
 }
+
+.budgetButton:hover{
+  opacity: 50%;
+}
+
 .budgetInput:focus {
   background-color: #ddd;
   outline: none;

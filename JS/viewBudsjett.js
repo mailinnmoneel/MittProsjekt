@@ -19,14 +19,15 @@ function updateViewBudget(i)
 
     <div class="side">
         <h3>Budsjett Applikasjon</h3>
-        <p>Starten på en budsjett applikasjon. Denne er ikke ferdig. Work in progress.
+        <p>En liten og enkel budsjett applikasjon laget bare for gøy utenfor skoletiden og som et lite koselig 
+            sideprosjekt. Fokuset er fortsatt på Javascript og designmønsteret MVC. 
         </p>
     </div>
 
     <div class="mainbudget">        
         <div class="resultDiv">
-            <h2> Budsjett: ${model.budget.budgetfixed},-</h2>
-            <h2> Utregning etter utgifter: ${model.budgetinputs.sum},-</h2>
+            <h2 id="hBudsj"> Budsjett: ${model.budget.budgetfixed},-</h2>
+            <h2 id="hBudsj"> Utregning etter utgifter: ${model.budgetinputs.sum},-</h2>
             <p style="color:white;"> Budsjett før siste regning ${model.budgetinputs.amount},- </p>
         </div>
         <div class="customGrid">
@@ -36,7 +37,7 @@ function updateViewBudget(i)
                     class="budgetInput"
                     type="number" 
                     placeholder = "Beløp"
-                    oninput = "model.budgetinputs.amount=this.value"
+                    oninput = "model.budgetinputs.input = this.value"
                 >
                 <button
                 class="budgetButton"
@@ -67,7 +68,7 @@ function updateViewBudget(i)
             </div>
             
             <div class="utgifterBlokk">
-                <h2>Utgifter</h2>
+                <h2 id="hBudsj">Utgifter</h2>
                 <div class="grid-container">    
                     <div class="grid-item">Tittel</div>
                     <div class="grid-item">Beløp</div>
@@ -90,7 +91,7 @@ function updateViewBudget(i)
     ` 
     return html;
 };
-//Plan fredag 1. hover effekt på knappene
+
 //If setning på nytt budsjett som sjekker tom input
 function createExpencesRow(i)
     {
@@ -108,20 +109,24 @@ function createExpencesRow(i)
 
 function upDateYourBudget()
 {    
-    model.budget.budgetfixed = model.budgetinputs.amount; 
-
+    if (model.budgetinputs.input == 0 )
+        {console.log("Fyll inn beløp"); return;}
+     
+    model.budget.budgetfixed = model.budgetinputs.input;
     updateView();
-    
 }
 
 function calculate() 
-{  
+{   
+    if(model.budgetinputs.expence === 0) {   console.log("du må fylle inn beløp");   return;  }
+    if(model.budgetinputs.title === null)   {   console.log("du må fylle inn tittel");  return; }
+    
     const budsjett = parseInt(model.budgetinputs.amount); 
     let utgifter = parseInt(model.budgetinputs.expence); 
-
     let calculation = budsjett - utgifter;
+
     model.budgetinputs.sum = parseInt(calculation);
-  
+
     model.budgetresult.push({    
         expencetitle: model.budgetinputs.title,  
         titleamount: model.budgetinputs.expence, 

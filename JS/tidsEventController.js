@@ -36,6 +36,7 @@ function updateClock()
   if (timeExpired() != null)
     klokkeDiv = timeExpired();
   
+    // updateView();
   updateViewSekunder();
 }
 

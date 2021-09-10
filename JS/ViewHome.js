@@ -23,13 +23,12 @@ function updateViewHome()
         <img src="bilde_Mailinn.jpg" style="width:400px";>
         <p>Navn: Mailinn Moneel Kiste</p>
         <p>IT-utvikler Student hos Get Academy</p>
-        <button>Send meg en email</button>
         <p>Ever tried. Ever failed. No matter. Try again. Fail again. Fail better. 
             -Samuel Beckett</p>
         </div>
 
         <div class="main">
-            <h1>Intro</h1>
+            <h2>Intro</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Eveniet commodi hic, ipsa porro quisquam et dolore, 
             quidem labore officia assumenda praesentium neque vero doloremque 
@@ -43,7 +42,7 @@ function updateViewHome()
             quidem labore officia assumenda praesentium neque vero doloremque 
             delectus accusantium exercitationem veritatis nostrum sed?</p>
             
-            <h1>Lorem</h1>
+            <h2>Lorem</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Eveniet commodi hic, ipsa porro quisquam et dolore, 
             quidem labore officia assumenda praesentium neque vero doloremque 
