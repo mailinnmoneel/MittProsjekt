@@ -68,8 +68,11 @@ function updateViewBudget(i)
             </div>
             
             <div class="utgifterBlokk">
-                <h2 id="hBudsj">Utgifter</h2>
-                <div class="grid-container">    
+                <div id="hBudsj">
+                    <h2>Utgifter</h2>
+                    <h2 onclick="clearUtgifter()">Tøm</h2>
+                </div>
+                <div class="grid-container">   
                     <div class="grid-item">Tittel</div>
                     <div class="grid-item">Beløp</div>
                 
@@ -79,8 +82,9 @@ function updateViewBudget(i)
                         {html+= createExpencesRow(i)
                     ;} 
                     html+= `    
-
+                    
                 </div>
+              
             </div>
         </div>
     </div>
@@ -92,7 +96,6 @@ function updateViewBudget(i)
     return html;
 };
 
-//If setning på nytt budsjett som sjekker tom input
 function createExpencesRow(i)
     {
   
@@ -100,8 +103,10 @@ function createExpencesRow(i)
         const expamount = model.budgetresult[i];
             return`
 
-        <div class="grid-item">${exptitle.expencetitle}</div>
-        <div class="grid-item">${expamount.titleamount},-</div>     
+        <div class="grid-item">
+            ${exptitle.expencetitle}</div>
+        <div class="grid-item">
+            -${expamount.titleamount},-</div>     
         `
     };
 
@@ -113,14 +118,25 @@ function upDateYourBudget()
         {console.log("Fyll inn beløp"); return;}
      
     model.budget.budgetfixed = model.budgetinputs.input;
+    model.budgetinputs.amount = model.budgetinputs.input;
+    model.budgetinputs.sum = model.budgetinputs.input;
+    updateView();
+}
+
+
+function clearUtgifter() {
+
+    model.budgetresult.splice(1,2);
     updateView();
 }
 
 function calculate() 
 {   
-    if(model.budgetinputs.expence === 0) {   console.log("du må fylle inn beløp");   return;  }
-    if(model.budgetinputs.title === null)   {   console.log("du må fylle inn tittel");  return; }
-    
+    if(model.budgetinputs.expence === 0) {
+        console.log("Beløp"); return; }
+    if(model.budgetinputs.title === null) {
+        console.log("Tittel"); return; }
+
     const budsjett = parseInt(model.budgetinputs.amount); 
     let utgifter = parseInt(model.budgetinputs.expence); 
     let calculation = budsjett - utgifter;

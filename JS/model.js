@@ -35,8 +35,8 @@ const model = {
     fredslilje: { kallenavn: "Fredslilje",
     vanneIntervallInput: "24", 
     },
-    budget: {budgetfixed: 20000,},
-    budgetinputs: { amount: 20000, title: null, expence: 0, sum: 0, input: 0,},
+    budget: {budgetfixed: 0,},
+    budgetinputs: { amount: 0, title: null, expence: 0, sum: 0, input: 0,},
     budgetresult : [
         {expenceamount: 0, expencetitle: null, titleamount: 0, total: 0, }
     ],
