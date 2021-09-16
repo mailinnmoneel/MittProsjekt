@@ -15,6 +15,7 @@ function updateViewMiddagsRullet()
         <a href="#Tidsevent" onclick="gotoTidsEvent()">Tidsevent</a>
         <a href="#ToDo" onclick="gotoToDo()">ToDo Liste</a>
         <a href="#Budsjett" onclick="gotoBudget()">Budsjett</a>
+        <a href="#Vitser" onclick="gotoJoke()">Vitser</a>
     </div>
 
 <div class="row">

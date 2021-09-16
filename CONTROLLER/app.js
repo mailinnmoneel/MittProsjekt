@@ -30,3 +30,8 @@ function gotoBudget()
     updateView();
 }
 
+function gotoJoke()
+{
+    model.app.currentpage = 'jokeAPI';
+    updateView();
+}
