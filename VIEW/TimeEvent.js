@@ -20,12 +20,10 @@ function updateViewTimeEvent()
     <div class="side">
         <h3>Tids Event</h3>
         <p>Fordi hvem glemmer vel ikke å vanne plantene sine?</p>
-        <p> Denne startet som min første obligatoriske oppgave etter bare 4 uker med koding på Get. Og er den oppgaven som sålangt har bydd på mest utfordring og til tider litt frustrasjon. 
+        <p> Denne startet som min første obligatoriske oppgave etter 4 uker med koding på Get. Og er den oppgaven som sålangt har bydd på mest utfordring og til tider litt frustrasjon. 
             Jeg lærte mye om Javascript og designmønsteret MVC, men også verdien av å ikke gi opp og ikke være redd for å feile og prøve igjen.  
             </p>
-        <p> Det er verdt å nevne at denne koden ikke fungerer helt optimalt og burde skrives i et annet designmønster enn MVC, da klokka oppdaterer 
-            hele siden hvert sekund. Jeh har valgt å ikke bruke tid på det nå da jeg vil forsette å lære det som er pensum nå.
-            Men kanskje den er fin å bruke senere når jeg skal lære C#?</p>    
+        <p> Det er verdt å nevne at denne koden ikke fungerer helt optimalt og burde skrives om. Noe som jeg tenker å gjøre er å kode en lignende tidsevent med Vue.</p>    
     </div>
 
     <div class="maintime">
