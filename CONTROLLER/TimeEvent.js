@@ -30,7 +30,7 @@ function time()
 
 function updateClock()
 {
-  klokkeDiv = days + "d " + hours + "h "
+ klokkeDiv = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s " ;
 
   if (timeExpired() != null)
